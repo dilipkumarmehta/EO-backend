@@ -24,11 +24,23 @@ public class MathApplicationTester {
    CalculatorService calcService;
 
    @Test
-   public void testAdd(){
+   public void add(){
       //add the behavior of calc service to add two numbers
-      when(calcService.add(10.0,20.0)).thenReturn(30.00);
+	   when(calcService.add(11.0,20.0)).thenReturn(30.00);
+       when(calcService.add(10.0,20.0)).thenReturn(30.00);
 		
       //test the add functionality
       Assert.assertEquals(mathApplication.add(10.0, 20.0),30.0,0);
+      Assert.assertEquals(mathApplication.add(11.0, 20.0),31.0,0);
+   }
+   @Test
+   public void subtract(){
+      //add the behavior of calc service to add two numbers
+	   when(calcService.subtract(50.0,20.0)).thenReturn(30.00);
+       when(calcService.subtract(40.0,20.0)).thenReturn(20.00);
+		
+      //test the add functionality
+      Assert.assertEquals(mathApplication.subtract(50.0, 20.0),30.0,0);
+      Assert.assertEquals(mathApplication.subtract(40.0, 20.0),20.0,0);
    }
 }

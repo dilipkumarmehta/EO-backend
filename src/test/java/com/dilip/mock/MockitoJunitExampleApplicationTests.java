@@ -1,4 +1,4 @@
-package com.dilip.mock;
+/*package com.dilip.mock;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,3 +14,4 @@ public class MockitoJunitExampleApplicationTests {
 	}
 
 }
+*/
